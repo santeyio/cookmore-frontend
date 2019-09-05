@@ -1,13 +1,18 @@
 <template>
   <div>
     <b-navbar sticky="true" variant="light">
-      <h1>CookMore</h1>
-    </b-navbar>
-    <Slide left>
-      <a id="home" href="#">
-        <span>Home</span>
-      </a>
-    </Slide>
+      
+      <div class="nav-wrapper">
+        <h1>CookMore</h1>
+        <Slide left>
+          <a href="/dash">Dashboard</a>
+          <a href="/calendar">Calendar</a>
+          <a href="/shopping-list">Shopping List</a>
+          <a href="/recipes">Recipes</a>
+          <a href="/friends">Friends</a>
+        </Slide>
+      </div>
+    </b-navbar>  
   </div>
 </template>
 
@@ -25,4 +30,9 @@ export default {
 h1 {
   color: pink;
 };
+.nav-wrapper {
+  width:100%;
+  /* display: flex;
+  justify-content: flex-end; */
+}
 </style>

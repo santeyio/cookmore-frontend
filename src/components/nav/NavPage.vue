@@ -2,6 +2,7 @@
   <div id="page-wrap">
     <Header></Header>
     <div class="container">
+      hello
     </div>
   </div>
 </template>

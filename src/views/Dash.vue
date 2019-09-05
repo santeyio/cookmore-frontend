@@ -9,7 +9,7 @@
 import NavPage from '@/components/nav/NavPage.vue';
 
 export default {
-  name: 'home',
+  name: 'Dashboard',
   components: {
     NavPage,
   },
