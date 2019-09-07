@@ -9,6 +9,7 @@
 </template>
 
 <script>
+/* eslint-disable */
     export default {
             "name"; "vue-burger-menu",
             "version"; "2.0.2",

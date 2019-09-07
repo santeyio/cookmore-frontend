@@ -6,6 +6,9 @@
       <div v-for="day in days" :key="day.dayId">
         <section>{{ day.day }}</section>
       </div>
+      <b-button v-on:click="getDays">
+        touch me
+      </b-button>
     </div>
   </div>
 </template>
@@ -62,24 +65,24 @@ export default {
   methods: {
     getDays() {
       const date = new Date();
-      const weekday = new Array(7);
-      weekday[0] = 'Sunday';
-      weekday[1] = 'Monday';
-      weekday[2] = 'Tuesday';
-      weekday[3] = 'Wednesday';
-      weekday[4] = 'Thursday';
-      weekday[5] = 'Friday';
-      weekday[6] = 'Saturday';
+      const display = [];
+      const weekday = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+      ];
 
       let today = date.getDay();
-      const display = new Array(7);
       display[0] = weekday[today];
 
-      for (let i = 0; i < 7; i += 1) {
+      for (let i = 0; i < 6; i += 1) {
         today += 1;
         const nextDay = today % 7;
-        display[i + 1] = weekday[nextDay];
-        console.log(display);
+        display.push(weekday[nextDay]);
       }
     },
   },
