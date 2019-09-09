@@ -3,12 +3,13 @@
     <Header></Header>
     <div class="container">
       <h1> {{ title }} </h1>
-      <div v-for="day in days" :key="day.dayId">
-        <section>{{ day.day }}</section>
+      <div class="days" v-for="day in getDays()">
+        <b-card
+          :header="day"
+        >
+          <b-card-text>Breakfast | Lunch | Dinner</b-card-text>
+        </b-card>
       </div>
-      <b-button v-on:click="getDays">
-        touch me
-      </b-button>
     </div>
   </div>
 </template>
@@ -24,48 +25,48 @@ export default {
   data() {
     return {
       title: "What's Cookin'",
-      days: [
-        {
-          dayId: 1,
-          day: 'Monday',
-          // breakfast: 0,
-          // lunch: 1,
-          // dinner: 1,
-        },
-        {
-          dayId: 2,
-          day: 'Tuesday',
-          // breakfast: 0,
-          // lunch: 1,
-          // dinner: 1,
-        },
-        {
-          dayId: 3,
-          day: 'Wednesday',
-        },
-        {
-          dayId: 4,
-          day: 'Thursday',
-        },
-        {
-          dayId: 5,
-          day: 'Friday',
-        },
-        {
-          dayId: 6,
-          day: 'Saturday',
-        },
-        {
-          dayId: 7,
-          day: 'Sunday',
-        },
-      ],
+      // days: [
+      //   {
+      //     dayId: 1,
+      //     day: 'Monday',
+      //     // breakfast: 0,
+      //     // lunch: 1,
+      //     // dinner: 1,
+      //   },
+      //   {
+      //     dayId: 2,
+      //     day: 'Tuesday',
+      //     // breakfast: 0,
+      //     // lunch: 1,
+      //     // dinner: 1,
+      //   },
+      //   {
+      //     dayId: 3,
+      //     day: 'Wednesday',
+      //   },
+      //   {
+      //     dayId: 4,
+      //     day: 'Thursday',
+      //   },
+      //   {
+      //     dayId: 5,
+      //     day: 'Friday',
+      //   },
+      //   {
+      //     dayId: 6,
+      //     day: 'Saturday',
+      //   },
+      //   {
+      //     dayId: 7,
+      //     day: 'Sunday',
+      //   },
+      // ],
     };
   },
   methods: {
     getDays() {
       const date = new Date();
-      const display = [];
+      const week = [];
       const weekday = [
         'Sunday',
         'Monday',
@@ -77,13 +78,14 @@ export default {
       ];
 
       let today = date.getDay();
-      display[0] = weekday[today];
+      week[0] = weekday[today];
 
       for (let i = 0; i < 6; i += 1) {
         today += 1;
         const nextDay = today % 7;
-        display.push(weekday[nextDay]);
+        week.push(weekday[nextDay]);
       }
+      return week;
     },
   },
 };
