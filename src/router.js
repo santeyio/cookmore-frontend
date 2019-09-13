@@ -1,11 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import Dash from './views/Dash.vue';
-import Calendar from './views/Calendar.vue';
-import ShoppingList from './views/ShoppingList.vue';
-import Recipes from './views/Recipes.vue';
-import Friends from './views/Recipes.vue';
+
+import Home from './pages/HomePage.vue';
+import Dash from './pages/DashPage.vue';
+import Calendar from './pages/CalendarPage.vue';
+import ShoppingList from './pages/ShoppingListPage.vue';
+import Recipes from './pages/RecipeDashPage.vue';
+import Friends from './pages/FriendsPage.vue';
+import Recipe from './pages/RecipePage.vue';
 
 Vue.use(Router);
 
@@ -15,41 +17,46 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'HomePage',
       component: Home,
     },
     {
       path: '/dash',
-      name: 'Dashboard',
+      name: 'DashboardPage',
       component: Dash,
     },
     {
       path: '/about',
-      name: 'about',
+      name: 'AboutPage',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      component: () => import(/* webpackChunkName: "about" */ './pages/AboutPage.vue'),
     },
     {
       path: '/calendar',
-      name: 'Calendar',
+      name: 'CalendarPage',
       component: Calendar,
     },
     {
       path: '/shopping-list',
-      name: 'ShoppingList',
+      name: 'ShoppingListPage',
       component: ShoppingList,
     },
     {
-      path: '/recipes',
-      name: 'Recipes',
+      path: '/recipe-dash',
+      name: 'RecipeDashPage',
       component: Recipes,
     },
     {
       path: '/friends',
-      name: 'Friends',
+      name: 'FriendsPage',
       component: Friends,
-    }
+    },
+    {
+      path: '/recipe',
+      name: 'RecipePage',
+      component: Recipe,
+    },
   ],
 });

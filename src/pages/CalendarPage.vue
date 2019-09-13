@@ -1,7 +1,6 @@
 <template>
   <div>
-    <NavPage>
-    </NavPage>
+    there will be a month long menu here
   </div>
 </template>
 
@@ -9,7 +8,7 @@
 import NavPage from '@/components/nav/NavPage.vue';
 
 export default {
-  name: 'Dashboard',
+  name: 'CalendarPage',
   components: {
     NavPage,
   },

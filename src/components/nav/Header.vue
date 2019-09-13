@@ -7,7 +7,7 @@
           <a class="link-properties" href="/dash">Dashboard</a>
           <a class="link-properties" href="/calendar">Calendar</a>
           <a class="link-properties" href="/shopping-list">Shopping List</a>
-          <a class="link-properties" href="/recipes">Recipes</a>
+          <a class="link-properties" href="/recipe-dash">Recipes</a>
           <a class="link-properties" href="/friends">Friends</a>
       </Slide>
       </div>

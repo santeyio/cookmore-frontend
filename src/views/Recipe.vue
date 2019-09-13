@@ -1,17 +1,17 @@
 <template>
   <div>
-    <NavPage>
-    </NavPage>
+    <RecipePage>
+    </RecipePage>
   </div>
 </template>
 
 <script>
-import NavPage from '@/components/nav/NavPage.vue';
+import RecipePage from '@/components/recipes/RecipePage.vue';
 
 export default {
-  name: 'Recipes',
+  name: 'RecipeDashboard',
   components: {
-    NavPage,
+    RecipeForm,
   },
 };
 </script>

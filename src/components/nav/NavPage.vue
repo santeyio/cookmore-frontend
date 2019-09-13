@@ -3,28 +3,44 @@
     <Header></Header>
     <div class="container">
       <h1> {{ title }} </h1>
-      <div class="days" v-for="day in getDays()">
+      <div v-for="day in getDays()">
         <b-card
-          :header="day"
+          :title="day"
         >
-          <b-card-text>Breakfast | Lunch | Dinner</b-card-text>
+          <Menu></Menu>
+          <!-- <div class="meal-container">
+            <b-card class="meal" v-if="Breakfast" header='Breakfast'>
+              <b-button href='/recipes' variant="secondary">Placeholder recipe name</b-button>
+            </b-card>
+            <b-card class="meal" v-if="Lunch" header='Lunch'>
+              <b-button href='/recipes' variant="secondary">Placeholder recipe name</b-button>
+            </b-card>
+            <b-card class="meal" v-if="Dinner" header='Dinner'>
+              <b-button href='/recipes' variant="secondary">Placeholder recipe name</b-button>
+            </b-card>
+          </div> -->
         </b-card>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import Header from '@/components/nav/Header.vue';
+import Menu from '@/components/nav/Menu.vue';
 
 export default {
   name: 'nav-page',
   components: {
     Header,
+    Menu,
   },
   data() {
     return {
       title: "What's Cookin'",
+      // Breakfast: true,
+      // Lunch: true,
+      // Dinner: true,
       // days: [
       //   {
       //     dayId: 1,
@@ -98,7 +114,12 @@ h1 {
   color: pink;
 }
 
-.days {
-  font: 200;
+.meal-container {
+  display:flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+}
+
+.meal {
 }
 </style>
