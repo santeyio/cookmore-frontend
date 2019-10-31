@@ -1,5 +1,5 @@
-<template>
-  <div id="page-wrap">
+<template variant="light">
+  <div id="page-wrap" variant ="light">
     <Header></Header>
     <div class="container">
       <h1> {{ title }} </h1>
@@ -7,76 +7,39 @@
         <b-card
           :title="day"
         >
-          <Menu></Menu>
-          <!-- <div class="meal-container">
+          <div class="meal-container">
             <b-card class="meal" v-if="Breakfast" header='Breakfast'>
-              <b-button href='/recipes' variant="secondary">Placeholder recipe name</b-button>
+              <b-button href='/recipe' variant="light">Placeholder recipe name</b-button>
             </b-card>
             <b-card class="meal" v-if="Lunch" header='Lunch'>
-              <b-button href='/recipes' variant="secondary">Placeholder recipe name</b-button>
+              <b-button href='/recipe' variant="light">Placeholder recipe name</b-button>
             </b-card>
             <b-card class="meal" v-if="Dinner" header='Dinner'>
-              <b-button href='/recipes' variant="secondary">Placeholder recipe name</b-button>
+              <b-button href='/recipe' variant="light">Placeholder recipe name</b-button>
             </b-card>
-          </div> -->
+          </div>
         </b-card>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
 import Header from '@/components/nav/Header.vue';
-import Menu from '@/components/nav/Menu.vue';
+// import Menu from '@/components/nav/Menu.vue';
 
 export default {
   name: 'nav-page',
   components: {
     Header,
-    Menu,
+    // Menu,
   },
   data() {
     return {
       title: "What's Cookin'",
-      // Breakfast: true,
-      // Lunch: true,
-      // Dinner: true,
-      // days: [
-      //   {
-      //     dayId: 1,
-      //     day: 'Monday',
-      //     // breakfast: 0,
-      //     // lunch: 1,
-      //     // dinner: 1,
-      //   },
-      //   {
-      //     dayId: 2,
-      //     day: 'Tuesday',
-      //     // breakfast: 0,
-      //     // lunch: 1,
-      //     // dinner: 1,
-      //   },
-      //   {
-      //     dayId: 3,
-      //     day: 'Wednesday',
-      //   },
-      //   {
-      //     dayId: 4,
-      //     day: 'Thursday',
-      //   },
-      //   {
-      //     dayId: 5,
-      //     day: 'Friday',
-      //   },
-      //   {
-      //     dayId: 6,
-      //     day: 'Saturday',
-      //   },
-      //   {
-      //     dayId: 7,
-      //     day: 'Sunday',
-      //   },
-      // ],
+      Breakfast: true,
+      Lunch: true,
+      Dinner: true,
     };
   },
   methods: {
@@ -111,7 +74,7 @@ export default {
 
 <style scoped>
 h1 {
-  color: pink;
+  color: #d57030;
 }
 
 .meal-container {
@@ -120,6 +83,4 @@ h1 {
   flex-wrap:wrap;
 }
 
-.meal {
-}
 </style>

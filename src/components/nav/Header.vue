@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar sticky="true" variant="light">
+    <b-navbar sticky="true" class="color">
       <div class="nav-wrapper">
         <h1>CookMore</h1>
         <Slide left>
@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 h1 {
-  color: pink;
+  color:#e98074;
 }
 
 .nav-wrapper {
@@ -40,5 +40,9 @@ h1 {
 .link-properties {
   color:white;
   font-weight: 700;
+}
+
+.color {
+  background-color: #eae7dc
 }
 </style>

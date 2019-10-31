@@ -1,13 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-
-import Home from './pages/HomePage.vue';
-import Dash from './pages/DashPage.vue';
-import Calendar from './pages/CalendarPage.vue';
-import ShoppingList from './pages/ShoppingListPage.vue';
-import Recipes from './pages/RecipeDashPage.vue';
-import Friends from './pages/FriendsPage.vue';
-import Recipe from './pages/RecipePage.vue';
+import HomePage from './pages/HomePage.vue';
+import DashPage from './pages/DashPage.vue';
+import CalendarPage from './pages/CalendarPage.vue';
+import ShoppingListPage from './pages/ShoppingListPage.vue';
+import RecipeDashPage from './pages/RecipeDashPage.vue';
+import FriendsPage from './pages/FriendsPage.vue';
+import RecipePage from './pages/RecipePage.vue';
 
 Vue.use(Router);
 
@@ -18,12 +17,12 @@ export default new Router({
     {
       path: '/',
       name: 'HomePage',
-      component: Home,
+      component: HomePage,
     },
     {
       path: '/dash',
       name: 'DashboardPage',
-      component: Dash,
+      component: DashPage,
     },
     {
       path: '/about',
@@ -36,27 +35,27 @@ export default new Router({
     {
       path: '/calendar',
       name: 'CalendarPage',
-      component: Calendar,
+      component: CalendarPage,
     },
     {
       path: '/shopping-list',
       name: 'ShoppingListPage',
-      component: ShoppingList,
+      component: ShoppingListPage,
     },
     {
       path: '/recipe-dash',
       name: 'RecipeDashPage',
-      component: Recipes,
+      component: RecipeDashPage,
     },
     {
       path: '/friends',
       name: 'FriendsPage',
-      component: Friends,
+      component: FriendsPage,
     },
     {
-      path: '/recipe',
+      path: '/recipe/:id',
       name: 'RecipePage',
-      component: Recipe,
+      component: RecipePage,
     },
   ],
 });

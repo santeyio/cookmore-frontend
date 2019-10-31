@@ -5,12 +5,11 @@
 </template>
 
 <script>
-import NavPage from '@/components/nav/NavPage.vue';
+// import NavPage from '@/components/nav/NavPage.vue';
 
 export default {
   name: 'FriendsPage',
   components: {
-    NavPage,
   },
 };
 </script>

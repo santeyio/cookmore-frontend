@@ -1,6 +1,7 @@
 <template>
   <div>
-    <RecipeForm></RecipeForm>
+    <RecipeForm>
+    </RecipeForm>
   </div>
 </template>
 
@@ -8,7 +9,7 @@
 import RecipeForm from '@/components/recipes/RecipeForm.vue';
 
 export default {
-  name: 'RecipeForm',
+  name: 'RecipePage',
   components: {
     RecipeForm,
   },
