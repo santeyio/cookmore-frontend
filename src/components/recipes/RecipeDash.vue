@@ -44,8 +44,7 @@ export default {
   },
   computed: {
     editable() {
-      
-      return this.$modalDisplay.state.editable;
+      return this.$store.state.modalDisplay.editable;
     },
   },
   // methods: {

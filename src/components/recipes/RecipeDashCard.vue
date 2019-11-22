@@ -18,7 +18,7 @@
 import {
   mdbCard, mdbCardImage, mdbCardBody, mdbCardTitle, mdbCardText, mdbStretchedLink,
 } from 'mdbvue';
-import { userRecipeArray } from '@/exampleData.js';
+import { userRecipeArray } from '@/exampleData';
 
 export default {
   name: 'RecipeDashCard',

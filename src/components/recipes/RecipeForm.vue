@@ -40,7 +40,7 @@
 <script>
 import Header from '@/components/nav/Header.vue';
 import RecipeFormInfo from '@/components/recipes/RecipeFormInfo.vue';
-import { exampleRecipe } from '@/exampleData.js';
+import { exampleRecipe } from '@/exampleData';
 
 export default {
   name: 'RecipeForm',
@@ -51,7 +51,7 @@ export default {
 
   data() {
     return {
-      recipe: exampleRecipe[this.$route.params.id]
+      recipe: exampleRecipe[this.$route.params.id],
     };
   },
   computed: {
