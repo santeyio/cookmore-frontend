@@ -56,6 +56,7 @@ export default new Router({
       path: '/recipe/:id',
       name: 'RecipePage',
       component: RecipePage,
+      props: true,
     },
   ],
 });

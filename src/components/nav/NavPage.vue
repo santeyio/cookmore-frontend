@@ -37,8 +37,8 @@ export default {
   data() {
     return {
       title: "What's Cookin'",
-      Breakfast: true,
-      Lunch: true,
+      Breakfast: false,
+      Lunch: false,
       Dinner: true,
     };
   },

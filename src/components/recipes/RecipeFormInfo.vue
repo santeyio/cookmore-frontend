@@ -22,7 +22,7 @@ export default {
     return {
       recipeYieldMin: '4',
       recipeYieldMax: '6',
-      activeTime: '30',
+      activeTime: ' 30 ',
       cookingTime: '45',
     };
   },
