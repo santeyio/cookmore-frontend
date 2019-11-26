@@ -3,23 +3,37 @@
     <Header></Header>
     <h1> {{ title }} </h1>
     <div>
-      <!-- currently treating create and search as two buttons with the same settings "action-button", 
-      search should become a search bar -->
-      <b-button v-b-modal.modal-1 class="action-button"><i class="fas fa-plus fa-3x align-middle"></i> Create</b-button>
+      <b-button v-b-modal.modal-1 class="action-button">
+        <i class="fas fa-plus fa-3x align-middle"></i>
+        Create
+      </b-button>
 
-      <b-modal id="modal-1" size="xl">
-        <modal-title>Testing</modal-title>
+      <b-modal id="modal-1"
+        size="xl"
+        ok-title="Publish" ok-variant="outline-success"
+        cancel-variant="outline-danger">
+
+        <template v-slot:modal-title v-if="editable">
+          <b-form-input v-model="text" placeholder="Recipe Name"></b-form-input>
+        </template>
+        <template v-slot:modal-title v-else>
+          Test
+        </template>
         <RecipeModalEdit v-if="editable" />
         <RecipeModal v-else/>
       </b-modal>
-      <b-button class="action-button"><i class="fas fa-search fa-3x align-middle"></i> Search</b-button>
+      <!-- search button is a place-holder for the search bar -->
+      <b-button class="action-button">
+        <i class="fas fa-search fa-3x align-middle"></i>
+        Search
+      </b-button>
     </div>
     <recipeDashCard />
   </div>
 </template>
 
 <script>
-import { mdbContainer, mdbRow, mdbCol } from 'mdbvue';
+// import { mdbContainer, mdbRow, mdbCol } from 'mdbvue';
 import Header from '@/components/nav/Header.vue';
 import RecipeDashCard from '@/components/recipes/RecipeDashCard.vue';
 import RecipeModal from '@/components/recipes/RecipeModal.vue';
@@ -32,9 +46,9 @@ export default {
     RecipeDashCard,
     RecipeModal,
     RecipeModalEdit,
-    mdbContainer,
-    mdbRow,
-    mdbCol,
+    // mdbContainer,
+    // mdbRow,
+    // mdbCol,
   },
   data() {
     return {

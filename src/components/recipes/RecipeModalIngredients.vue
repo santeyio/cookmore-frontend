@@ -3,9 +3,9 @@
         <h5 class="section-title">Ingredients</h5>
         <dl>
         1 tsp of ingredient
-        </dl>  
+        </dl>
     </div>
-</template>    
+</template>
 
 <script>
 
@@ -14,5 +14,3 @@ export default {
 };
 
 </script>
-
-    

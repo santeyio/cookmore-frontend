@@ -2,7 +2,7 @@
     <div>
         Special equipment needed
     </div>
-</template>    
+</template>
 
 <script>
 
@@ -11,5 +11,3 @@ export default {
 };
 
 </script>
-
-    

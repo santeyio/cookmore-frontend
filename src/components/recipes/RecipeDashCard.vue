@@ -1,13 +1,15 @@
 <template>
   <div class="recipe-card-container">
-    <div class="recipe-card" v-for="recipe in recipeArray.slice().reverse()" v-bind:key="recipeArray.id">
+    <div class="recipe-card" v-for="recipe in recipeArray.slice().reverse()"
+      v-bind:key="recipeArray.id">
         <mdb-card>
           <mdb-card-image :src="recipe.image"
           alt ="Card image cap" target="_blank"></mdb-card-image>
           <mdb-card-body>
             <mdb-card-title>{{ recipe.name }}</mdb-card-title>
             <mdb-card-text>{{ recipe.description }}</mdb-card-text>
-            <mdb-stretched-link :href="`/recipe/${recipe.id}`" class="stretched-link"></mdb-stretched-link>
+            <mdb-stretched-link :href="`/recipe/${recipe.id}`"
+            class="stretched-link" />
           </mdb-card-body>
         </mdb-card>
     </div>

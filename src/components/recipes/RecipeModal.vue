@@ -1,4 +1,5 @@
 <template>
+<!-- all the little components need to be deleted -->
     <div>
         <b-card class="container" :title="RecipeModalTitle">
             <b-card-sub-title>{{ user.username }}</b-card-sub-title>
@@ -32,11 +33,11 @@
             </b-row>
         </b-card>
     </div>
-</template>    
+</template>
 
 <script>
-import { user } from '@/exampleData.js';
-import RecipeModalTitle from '@/components/recipes/RecipeModalTitle.vue';
+import { user } from '@/exampleData';
+// import RecipeModalTitle from '@/components/recipes/RecipeModalTitle.vue';
 import RecipeModalDescription from '@/components/recipes/RecipeModalDescription.vue';
 import RecipeModalDirections from '@/components/recipes/RecipeModalDirections.vue';
 import RecipeModalIngredients from '@/components/recipes/RecipeModalIngredients.vue';
@@ -47,18 +48,18 @@ import RecipeFormInfo from '@/components/recipes/RecipeFormInfo.vue';
 export default {
   name: 'RecipeModal',
   components: {
-      RecipeModalTitle,
-      RecipeModalDescription,
-      RecipeModalDirections,
-      RecipeModalIngredients,
-      RecipeModalEquipment,
-      RecipeModalNotes,
-      RecipeFormInfo,
+    // RecipeModalTitle,
+    RecipeModalDescription,
+    RecipeModalDirections,
+    RecipeModalIngredients,
+    RecipeModalEquipment,
+    RecipeModalNotes,
+    RecipeFormInfo,
   },
 
   data() {
     return {
-      user: user,
+      user,
     };
   },
 };
@@ -80,5 +81,3 @@ h1 {
   text-align: left;
 }
 </style>
-
-    

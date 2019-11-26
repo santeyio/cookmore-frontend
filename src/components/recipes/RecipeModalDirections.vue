@@ -5,7 +5,7 @@
         1. Do these things with the ingredients
         </dl>
     </div>
-</template>    
+</template>
 
 <script>
 
@@ -14,5 +14,3 @@ export default {
 };
 
 </script>
-
-    
