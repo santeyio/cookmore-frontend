@@ -2,7 +2,7 @@
     <div>
        Recipe Description
     </div>
-</template>    
+</template>
 
 <script>
 
@@ -11,5 +11,3 @@ export default {
 };
 
 </script>
-
-    

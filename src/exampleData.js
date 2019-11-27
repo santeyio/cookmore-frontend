@@ -1,116 +1,116 @@
 export const exampleRecipe = {
-    1:{
+  1: {
+    id: 1,
+    name: 'Bulgogi Pho',
+    username: 'Amy Hayashida',
+    description: 'This is an evil fusion that should never exist',
+    yield_min: '4',
+    yield_max: '6',
+    active_time: '30 minutes',
+    cooking_time: '45 minutes',
+    ingredients: [
+      {
         id: 1,
-        name: 'Bulgogi Pho',
-        username: 'Amy Hayashida',
-        description: 'This is an evil fusion that should never exist',
-        yield_min: '4',
-        yield_max: '6',
-        active_time: '30 minutes',
-        cooking_time: '45 minutes',
-        ingredients: [
-            {
-            id: 1,
-            amount: '1/2',
-            unit: 'tsp',
-            item: 'baking soda',
-            },
-            {
-            id: 2,
-            amount: '4',
-            unit: 'lbs',
-            item: 'potatoes',
-            },
-            {
-            id: 3,
-            amount: '5',
-            unit: 'tbls',
-            item: 'Olive oil',
-            },
-            {
-            id: 4,
-            amount: '3',
-            unit: 'clove',
-            item: 'garlic',
-            },
-        ],
-        directions: [
-            {
-            id: 1,
-            order: '1',
-            step: 'adjust oven rack to center position',
-            },
-            {
-            id: 2,
-            order: '2',
-            step: 'combine oil, pepper, cook',
-            },
-            {
-            id: 3,
-            order: '3',
-            step: 'place in oven',
-            },
-        ],
-        equipment: 'baking sheet, fine-mesh strainer',
-        notes: 'be sure to chop the potatoes finely. Also realize that this there is no broth in this pho recipe.',
-    },
-    4:{
+        amount: '1/2',
+        unit: 'tsp',
+        item: 'baking soda',
+      },
+      {
+        id: 2,
+        amount: '4',
+        unit: 'lbs',
+        item: 'potatoes',
+      },
+      {
+        id: 3,
+        amount: '5',
+        unit: 'tbls',
+        item: 'Olive oil',
+      },
+      {
         id: 4,
-        name: 'Street Tacos',
-        username: 'Amy Hayashida',
-        description: 'One of the 7 wonders of the culinary world, so perfect, so small',
-        yield_min: '3',
-        yield_max: '8',
-        active_time: '10 minutes',
-        cooking_time: '45 minutes',
-        ingredients: [
-            {
-            id: 1,
-            amount: '1',
-            unit: 'lb',
-            item: 'pork butt',
-            },
-            {
-            id: 2,
-            amount: '1',
-            unit: 'tsp',
-            item: 'weed',
-            },
-            {
-            id: 3,
-            amount: '1',
-            unit: 'tbls',
-            item: 'coriander',
-            },
-            {
-            id: 4,
-            amount: '3',
-            unit: 'clove',
-            item: 'garlic',
-            },
-        ],
-        directions: [
-            {
-            id: 1,
-            order: '1',
-            step: 'Chop meat into 1 inch cubes, chop garlic and weed',
-            },
-            {
-            id: 2,
-            order: '2',
-            step: 'combine pork with seasons and in pack into a small pan so there is no air',
-            },
-            {
-            id: 3,
-            order: '3',
-            step: 'place in oven and slow cook for 3 hours',
-            },
-        ],
-        equipment: '9x13 pan or smaller',
-        notes: 'be sure to chop the weed finely.',
-    }
+        amount: '3',
+        unit: 'clove',
+        item: 'garlic',
+      },
+    ],
+    directions: [
+      {
+        id: 1,
+        order: '1',
+        step: 'adjust oven rack to center position',
+      },
+      {
+        id: 2,
+        order: '2',
+        step: 'combine oil, pepper, cook',
+      },
+      {
+        id: 3,
+        order: '3',
+        step: 'place in oven',
+      },
+    ],
+    equipment: 'baking sheet, fine-mesh strainer',
+    notes: 'be sure to chop the potatoes finely. Also realize that this there is no broth in this pho recipe.',
+  },
+  4: {
+    id: 4,
+    name: 'Street Tacos',
+    username: 'Amy Hayashida',
+    description: 'One of the 7 wonders of the culinary world, so perfect, so small',
+    yield_min: '3',
+    yield_max: '8',
+    active_time: '10 minutes',
+    cooking_time: '45 minutes',
+    ingredients: [
+      {
+        id: 1,
+        amount: '1',
+        unit: 'lb',
+        item: 'pork butt',
+      },
+      {
+        id: 2,
+        amount: '1',
+        unit: 'tsp',
+        item: 'weed',
+      },
+      {
+        id: 3,
+        amount: '1',
+        unit: 'tbls',
+        item: 'coriander',
+      },
+      {
+        id: 4,
+        amount: '3',
+        unit: 'clove',
+        item: 'garlic',
+      },
+    ],
+    directions: [
+      {
+        id: 1,
+        order: '1',
+        step: 'Chop meat into 1 inch cubes, chop garlic and weed',
+      },
+      {
+        id: 2,
+        order: '2',
+        step: 'combine pork with seasons and in pack into a small pan so there is no air',
+      },
+      {
+        id: 3,
+        order: '3',
+        step: 'place in oven and slow cook for 3 hours',
+      },
+    ],
+    equipment: '9x13 pan or smaller',
+    notes: 'be sure to chop the weed finely.',
+  },
 };
-    
+
 
 export const userRecipeArray = [
   {
@@ -146,8 +146,8 @@ export const userRecipeArray = [
 ];
 
 export const user = {
-    1:{
-        id:1,
-        username: "Amy Hayashida"
-    }
-}
+  1: {
+    id: 1,
+    username: 'Amy Hayashida',
+  },
+};
